@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /Users/danielfranch/Documents/Projects/personal/myclicker/clicker
+    working_directory: ~/clicker
     docker:
       - image: circleci/node:6.10.2-browsers
         environment:
