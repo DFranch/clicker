@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: /Users/danielfranch/Documents/Projects/personal/myclicker/clicker
+    docker:
+      - image: circleci/node:6.10.2-browsers
+        environment:
+          NODE_ENV: test
+    steps:
+      - checkout
+      - run:
+          name: install node_modules
+          command: npm install
+      - run:
+          name: Run e2e Tests
+          command: npm run e2e
